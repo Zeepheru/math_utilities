@@ -61,7 +61,7 @@ def parallel(a, b): #compares int(k * 10 ** 9) - yeah floats are annoying
     else:
         return False
 
-def foot_of_perpendicular(a, b)
+def foot_of_perpendicular(a, b):
     return 0
 
 def length_of_perpendicular(A, b):
@@ -72,7 +72,7 @@ def length_of_perpendicular(A, b):
 
 def main(): #main calculator code lol
     ### nparrays are np.array(array)
-    k = 3 / 10
+    k = -4
     a = np.array([
         [1],
         [2],
@@ -83,10 +83,10 @@ def main(): #main calculator code lol
         [-3],
         [6]
     ])
-    p = np.array([
-        [1 + k],
-        [2 - 5 * k],
-        [-2 + 8 * k]
+    c = np.array([
+        [2 * k],
+        [17 + 2 * k],
+        [-2 - 1 * k]
     ])
     e = np.array([
         [1],
@@ -97,7 +97,7 @@ def main(): #main calculator code lol
 
     e = a + 3 * b
 
-    return get_angle_deg(a,p), get_angle_deg(b,p) 
+    return vector_length(c)
 
 if __name__ == "__main__":
     print(main())
