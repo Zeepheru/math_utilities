@@ -9,9 +9,9 @@ def cross_product(a, b):
     z1, z2 = a[2][0], b[2][0]
 
     return np.array([
-        [ x1 * y2 - x2 * y1 ],
+        [ y1 * z2 - y2 * z1 ],
         [ -(x1 * z2 - x2 * z1) ],
-        [ y1 * z2 - y2 * z1 ]
+        [ x1 * y2 - x2 * y1 ]
     ])
 
 def unit_vector(a):
@@ -74,14 +74,14 @@ def main(): #main calculator code lol
     ### nparrays are np.array(array)
     k = -4
     a = np.array([
-        [1],
-        [2],
-        [-2]
+        [5],
+        [4],
+        [0]
     ])
     b = np.array([
-        [2],
-        [-3],
-        [6]
+        [-1],
+        [0],
+        [4]
     ])
     c = np.array([
         [2 * k],
@@ -97,7 +97,7 @@ def main(): #main calculator code lol
 
     e = a + 3 * b
 
-    return vector_length(c)
+    return cross_product(a, b)
 
 if __name__ == "__main__":
     print(main())
